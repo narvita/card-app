@@ -1,9 +1,9 @@
 .main {
-    width: 80%;
-    overflow-y: scroll;
-    height: 95vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px, auto, 40px, 0;
+  width: 80%;
+  overflow-y: scroll;
+  height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px, auto, 40px, 0;
 }

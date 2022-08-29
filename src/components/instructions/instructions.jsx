@@ -1,10 +1,7 @@
-import './instractions.css'
+import "./instractions.css";
+
 function Instractions() {
-    return (
-      <div className="section">
-        Instractions here
-      </div>
-    );
-  }
-  
+  return <div className="section">Instractions here</div>;
+}
+
 export default Instractions;
