@@ -10,9 +10,8 @@ function App() {
 
   useEffect(() => {
     const storedArr = JSON.parse(localStorage.getItem('items'));
-    storedArr? setNumArr(storedArr): setNumArr(numArr);
-    
-  },[]);
+    storedArr ? setNumArr(storedArr) : setNumArr(numArr)
+  }, []);
 
   function genereteNumber() {
     const number = Math.floor(Math.random() * 10000);
@@ -38,19 +37,18 @@ function App() {
       localStorage.setItem('items', JSON.stringify(modifiedCardsArr));
       return modifiedCardsArr;
     })
-
   }
 
   function removeCard(id) {
-    const modifiedCardsArr = [...numArr].filter(el => el.id !== id) 
+    const modifiedCardsArr = [...numArr].filter(el => el.id !== id)
     setNumArr(modifiedCardsArr);
     localStorage.setItem('items', JSON.stringify(modifiedCardsArr));
   }
 
   return (
     <div className="app">
-      <Header addCard={genereteNumber} sort={sortNumberArr}/>
-      <Main numArr={numArr} deletCard={removeCard}/>
+      <Header addCard={genereteNumber} sort={sortNumberArr} />
+      <Main numArr={numArr} deletCard={removeCard} />
       <Instractions />
       <Footer />
     </div>
