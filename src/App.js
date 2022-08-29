@@ -1,18 +1,17 @@
+import { useState, useEffect } from 'react';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Instractions from './components/instructions/instructions';
-import Main from './pages/main'
+import Main from './components/main'
 import './App.css';
-import { useState, useEffect } from 'react';
 
 function App() {
-
   const [numArr, setNumArr] = useState([]);
+
   useEffect(() => {
     const storedArr = JSON.parse(localStorage.getItem('items'));
-    if (storedArr) {
-      setNumArr(storedArr);
-    }
+    storedArr? setNumArr(storedArr): setNumArr(numArr);
+    
   },[]);
 
   function genereteNumber() {
